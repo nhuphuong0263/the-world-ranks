@@ -1,0 +1,36 @@
+// - getStaticProps: get all the data at the build time so later when we go on visit the page all the data would be available for us.
+//                   we dont't need to wait for any call to resolve, 
+//                   but remember this is static it means that it will only be updated when we reveal the project
+//                   (lấy tất cả dữ liệu tại thời điểm xây dựng để sau này khi chúng ta truy cập trang,
+//                    tất cả dữ liệu sẽ có sẵn cho chúng ta
+//                    Chúng ta không cần đợi bất kỳ cuộc gọi nào để giải quyết
+//                    Nhưng hãy nhớ rằng đây là tĩnh, nghĩa là nó sẽ chỉ được cập nhật khi chúng tôi rebuild/ tiết lộ dự án)
+/* - getServerSideProps: whenerver you go to the page we went to fetch the data in the server before we render it 
+                         (bất cứ khi nào bạn truy cập trang, chúng tôi tìm nạp dữ liệu trong máy chủ trước khi hiển thị)
+
+*/
+/* SORT COUNTRIESTABLE
+  1. writer orderBy() width 2 parameter: countries, direction
+      - sort()
+      - check if-else with: direction === 'asc/desc' (asc/desc is a String)
+      - we only want to use the other countries and we want the country to stay the same. so in order to fix that
+        we want to create a new array by saying [...countries]
+      - modify countries.map() to orderedCountries.map() in CountriesTable component
+      - add KeyboardArrowDownRounded icon
+      - wirter sort component icon for tab Name/Population: SortArrow({direction})
+        + check !direction return null 
+        + if/else: desc/asc
+      - create useState: direction, value
+      - writer switchDirection()
+        + button onClick={switchDirection}
+      - writer setValueAndDirection(value)
+        + parameter: value state
+        + call switchDirection()
+        + setValue(value)
+        + modify: button onClick={() => setValueAndDirection('name'/'direction')}
+        + but orderBy() is only sort population, so add more: value avarible
+    2. filter
+    3. [id] Country:
+      - pages/country/[id].js:
+        + 
+*/
